@@ -1,3 +1,10 @@
 [
-
+  {
+    "id": "com.novalist.ai",
+    "name": "AI Assistant",
+    "description": "AI-powered chat, story analysis, and scene statistics. Supports LM Studio and GitHub Copilot CLI providers.",
+    "author": "Novalist Team",
+    "repo": "Drommedhar/novalist-aiassistant",
+    "tags": ["ai", "analysis", "chat"]
+  }
 ]
