@@ -6,5 +6,37 @@
     "author": "Novalist Team",
     "repo": "Drommedhar/novalist-aiassistant",
     "tags": ["ai", "analysis", "chat"]
+  },
+  {
+    "id": "com.novalist.formats",
+    "name": "Formats",
+    "description": "Export to HTML, RTF, ODT, plain text, Fountain and FictionBook. Import from Scrivener, Ulysses, Markdown folders and delimited files. Checks a finished EPUB before you send it.",
+    "author": "Novalist Team",
+    "repo": "Drommedhar/novalist-extensions",
+    "tags": ["export", "import", "epub", "formats"]
+  },
+  {
+    "id": "com.novalist.insight",
+    "name": "Insight",
+    "description": "Reports over the whole manuscript: name drift, project health, a continuity worklist, a word-frequency concordance and a pacing curve.",
+    "author": "Novalist Team",
+    "repo": "Drommedhar/novalist-extensions",
+    "tags": ["analysis", "reports", "continuity", "pacing"]
+  },
+  {
+    "id": "com.novalist.publish",
+    "name": "Publish",
+    "description": "Generates a self-contained static website from your world, your manuscript or both.",
+    "author": "Novalist Team",
+    "repo": "Drommedhar/novalist-extensions",
+    "tags": ["publishing", "website", "world"]
+  },
+  {
+    "id": "com.novalist.toolkit",
+    "name": "Toolkit",
+    "description": "Writing sprints, a board over your to-do comments, dictionary and thesaurus lookup, an offline name generator, and web page capture that keeps the readable text.",
+    "author": "Novalist Team",
+    "repo": "Drommedhar/novalist-extensions",
+    "tags": ["sprints", "tasks", "dictionary", "names", "research"]
   }
 ]

@@ -35,7 +35,10 @@ Want to publish your extension? See [CONTRIBUTING.md](CONTRIBUTING.md) for the s
 
 Each GitHub release on your extension repo must:
 
-- **Tag** — Use semantic versioning: `v1.0.0`, `v1.2.3`, etc.
+- **Tag** — Use semantic versioning: `v1.0.0`, `v1.2.3`, etc. If one repository
+  holds several extensions, name the extension in the tag as well —
+  `toolkit-v1.2.0` — so releasing one does not imply a version bump for its
+  siblings. The store reads the version out of the tag either way.
 - **Asset** — Attach a ZIP file named `{extension-id}.zip` (e.g. `com.example.myextension.zip`).
 - **ZIP contents** — Flat structure (no wrapper folder):
   ```
@@ -47,5 +50,23 @@ Each GitHub release on your extension repo must:
   ```
 - **extension.json** — Must include `version`, `minHostVersion`, and optionally `maxHostVersion` for compatibility checking. Can include an optional `icon` URL for the store listing.
 - **Pre-releases** — GitHub releases marked as pre-release are ignored by the store.
+
+### Several Extensions in One Repository
+
+The store finds a release by an asset named `{id}.zip` and installs into a
+folder named after the id, so one repository can publish several extensions
+without them colliding. Two extra assets are worth attaching when it does,
+named the same way:
+
+| Asset | What the store does with it |
+| --- | --- |
+| `{id}.zip` | Required. The extension itself. |
+| `{id}.extension.json` | Compatibility and the icon, read before anything is downloaded. |
+| `{id}.README.md` | The store page for this extension. |
+
+Without them the store reads `extension.json` and the README at the repository
+root, which is correct for a repository holding one extension and wrong for one
+holding four: the root has no single manifest, and its README describes the
+repository rather than any one extension in it.
 
 For full documentation, see the [Extension Developer Guide](https://github.com/Drommedhar/novalist-official/blob/main/docs/extension-guide.md).

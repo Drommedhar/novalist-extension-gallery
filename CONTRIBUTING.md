@@ -43,7 +43,7 @@ Before submitting, make sure:
 - [ ] Your repo has at least **one GitHub release** with a ZIP asset named `{id}.zip`.
 - [ ] The ZIP contains `extension.json` at the root with a valid `id`, `version`, `minHostVersion`, and `entryAssembly`.
 - [ ] The `id` in `gallery.json` matches the `id` in your `extension.json`.
-- [ ] The `version` in `extension.json` matches the release tag (without the `v` prefix).
+- [ ] The `version` in `extension.json` matches the version in the release tag.
 - [ ] Your extension does **not** contain malicious code, telemetry without disclosure, or license violations.
 - [ ] Your `gallery.json` entry is valid JSON (no trailing commas, proper quoting).
 
@@ -51,10 +51,31 @@ Before submitting, make sure:
 
 Each release on your GitHub repo must follow the [release convention](README.md#release-convention):
 
-- Tag format: `v{major}.{minor}.{patch}` (e.g. `v1.0.0`)
+- Tag format: `v{major}.{minor}.{patch}` (e.g. `v1.0.0`), or `{slug}-v{version}`
+  (e.g. `toolkit-v1.2.0`) when one repository holds several extensions
 - Attach a ZIP asset: `{extension-id}.zip`
 - ZIP must be flat (no wrapper folder) and contain `extension.json` + the entry assembly DLL
 - Set `minHostVersion` (and optionally `maxHostVersion`) for compatibility
+
+## Several Extensions in One Repository
+
+Nothing here assumes one extension per repository. The store matches a release
+by an asset named `{id}.zip` and installs into a folder named after the id, so
+several can share a repository and a release history.
+
+When they do, name the extension in the tag — `toolkit-v1.2.0` rather than
+`v1.2.0` — and attach two more assets beside the ZIP:
+
+- `{id}.extension.json` — the manifest, so compatibility and the icon can be
+  checked before anything is downloaded.
+- `{id}.README.md` — this extension's store page.
+
+Both are optional. Without them the store falls back to `extension.json` and the
+README at the repository root, which is right for a repository with one
+extension in it. A repository with four has no manifest at its root, and its
+README describes the repository rather than any one of them — so all four
+listings would show the same page and none would have its compatibility checked
+in advance.
 
 ## Updating Your Extension
 
