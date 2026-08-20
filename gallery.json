@@ -5,7 +5,11 @@
     "description": "AI-powered chat, story analysis, and scene statistics. Supports LM Studio and GitHub Copilot CLI providers.",
     "author": "Novalist Team",
     "repo": "Drommedhar/novalist-aiassistant",
-    "tags": ["ai", "analysis", "chat"]
+    "tags": [
+      "ai",
+      "analysis",
+      "chat"
+    ]
   },
   {
     "id": "com.novalist.formats",
@@ -13,7 +17,12 @@
     "description": "Export to HTML, RTF, ODT, plain text, Fountain and FictionBook. Import from Scrivener, Ulysses, Markdown folders and delimited files. Checks a finished EPUB before you send it.",
     "author": "Novalist Team",
     "repo": "Drommedhar/novalist-extensions",
-    "tags": ["export", "import", "epub", "formats"]
+    "tags": [
+      "export",
+      "import",
+      "epub",
+      "formats"
+    ]
   },
   {
     "id": "com.novalist.insight",
@@ -21,7 +30,12 @@
     "description": "Reports over the whole manuscript: name drift, project health, a continuity worklist, a word-frequency concordance and a pacing curve.",
     "author": "Novalist Team",
     "repo": "Drommedhar/novalist-extensions",
-    "tags": ["analysis", "reports", "continuity", "pacing"]
+    "tags": [
+      "analysis",
+      "reports",
+      "continuity",
+      "pacing"
+    ]
   },
   {
     "id": "com.novalist.publish",
@@ -29,7 +43,25 @@
     "description": "Generates a self-contained static website from your world, your manuscript or both.",
     "author": "Novalist Team",
     "repo": "Drommedhar/novalist-extensions",
-    "tags": ["publishing", "website", "world"]
+    "tags": [
+      "publishing",
+      "website",
+      "world"
+    ]
+  },
+  {
+    "id": "com.novalist.speech",
+    "name": "Speech",
+    "description": "Designs a voice for each character from their Codex entry and reads your book in it, with every line performed as the prose directs. Runs on your own machine and reaches no network except the one download you ask for.",
+    "author": "Novalist Team",
+    "repo": "Drommedhar/novalist-extensions",
+    "tags": [
+      "speech",
+      "narration",
+      "voices",
+      "audiobook",
+      "local"
+    ]
   },
   {
     "id": "com.novalist.toolkit",
@@ -37,6 +69,12 @@
     "description": "Writing sprints, a board over your to-do comments, dictionary and thesaurus lookup, an offline name generator, and web page capture that keeps the readable text.",
     "author": "Novalist Team",
     "repo": "Drommedhar/novalist-extensions",
-    "tags": ["sprints", "tasks", "dictionary", "names", "research"]
+    "tags": [
+      "sprints",
+      "tasks",
+      "dictionary",
+      "names",
+      "research"
+    ]
   }
 ]
